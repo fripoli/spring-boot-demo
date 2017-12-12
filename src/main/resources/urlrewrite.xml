@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<!--
+    http://localhost:8080/rewrite-status (only works when running locally)
+-->
+<urlrewrite use-query-string="true">
+    <rule>
+        <from>^/([a-z]{2})/(.*)$</from>
+        <to>/$2</to>
+    </rule>
+    <rule>
+        <from>^/([a-z]{2})$</from>
+        <to>/</to>
+    </rule>
+</urlrewrite>
