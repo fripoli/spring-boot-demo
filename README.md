@@ -89,7 +89,7 @@ To save lots of peoples time, I suggest the method on the `urlrewrite` library t
 
 ```java
 private void loadUrlRewriterLocal() {
-    InputStream inputStream = getClass().getClassLoader().getResourceAsStream(confPath);
+    InputStream inputStream = context.getResourceAsStream(confPath);
     // attempt to retrieve from location other than local WEB-INF
     if ( inputStream == null ) {
         inputStream = ClassLoader.getSystemResourceAsStream(confPath);
